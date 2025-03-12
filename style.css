@@ -2,24 +2,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #0073e6;
+    text-align: center;
+    background: #007bff;
     color: white;
     padding: 20px;
 }
 
-.about, .projects {
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #333;
+}
+
+nav ul li {
+    display: inline;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
     padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
 }
 
 footer {
-    background: #333;
-    color: white;
+    text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background: #007bff;
+    color: white;
 }
