@@ -7,4 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
         });
     });
+
+    const projects = document.querySelectorAll(".project");
+    projects.forEach((project, index) => {
+        project.style.animation = `fadeIn 1s ease-in-out ${index * 0.2}s forwards`;
+        project.style.opacity = "0";
+    });
 });
