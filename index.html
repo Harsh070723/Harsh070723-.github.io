@@ -1,99 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (keep your existing head content) ... -->
+    <!-- ===== MANDATORY META TAGS ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Beahte - Data Analyst</title>
+
+    <!-- ===== EXTERNAL LINKS ===== -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!-- ... (your existing header) ... -->
+        <nav>
+            <div class="logo">Harsh Beahte</div>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#timeline">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="YOUR_LINKEDIN_URL" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="YOUR_GITHUB_URL" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
-        <!-- ... (your existing hero content) ... -->
+        <div class="hero-content" data-aos="fade-right">
+            <p class="hello">HELLO!</p>
+            <h1>I'm <span>Harsh Beahte</span></h1>
+            <h2>Data Analyst</h2>
+            <p class="description">I transform raw data into actionable insights!</p>
+            <a href="#projects" class="btn">My Work</a>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+            <img src="profile.png" alt="Harsh Beahte - Professional Portrait">
+        </div>
     </section>
 
     <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects" class="projects">
-        <h2 data-aos="fade-up">My Projects</h2>
-        
-        <!-- Project Card 1 -->
-        <div class="project-card" data-aos="fade-up">
-            <img src="project1.jpg" alt="Sales Dashboard Preview">
-            <h3>Sales Performance Dashboard</h3>
-            <p>Interactive Power BI dashboard analyzing regional sales trends.</p>
-            <div class="project-links">
-                <a href="https://github.com/yourusername/sales-dashboard" target="_blank">
-                    <i class="fab fa-github"></i> Code
-                </a>
-            </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div class="project-card" data-aos="fade-up">
-            <img src="project2.jpg" alt="Customer Segmentation Analysis">
-            <h3>Customer Segmentation</h3>
-            <p>Clustering analysis using Python and scikit-learn.</p>
-            <div class="project-links">
-                <a href="https://github.com/yourusername/customer-segmentation" target="_blank">
-                    <i class="fab fa-github"></i> Code
-                </a>
-            </div>
-        </div>
+        <!-- Add project cards here -->
     </section>
 
-    <!-- ===== TIMELINE (Experience/Education) ===== -->
+    <!-- ===== TIMELINE SECTION ===== -->
     <section id="timeline" class="timeline">
-        <h2 data-aos="fade-up">Experience & Education</h2>
-        
-        <div class="timeline-item" data-aos="fade-right">
-            <div class="timeline-date">2023 - Present</div>
-            <div class="timeline-content">
-                <h3>Junior Data Analyst</h3>
-                <h4>XYZ Corp</h4>
-                <p>Developed predictive models improving forecasting accuracy by 15%.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-right">
-            <div class="timeline-date">2020 - 2023</div>
-            <div class="timeline-content">
-                <h3>B.Sc. in Data Science</h3>
-                <h4>University Name</h4>
-                <p>Relevant coursework: Statistics, Machine Learning, SQL.</p>
-            </div>
-        </div>
+        <!-- Add experience/education timeline here -->
     </section>
 
     <!-- ===== SKILLS SECTION ===== -->
     <section id="skills" class="skills">
-        <h2 data-aos="fade-up">Skills</h2>
-        
-        <div class="skill-category" data-aos="fade-up">
-            <h3>Data Analysis</h3>
-            <div class="skill-item">Python</div>
-            <div class="skill-item">SQL</div>
-            <div class="skill-item">Power BI</div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up">
-            <h3>Tools</h3>
-            <div class="skill-item">Excel</div>
-            <div class="skill-item">Tableau</div>
-            <div class="skill-item">Git</div>
-        </div>
+        <!-- Add skills categories here -->
     </section>
 
     <!-- ===== CONTACT SECTION ===== -->
     <section id="contact">
-        <!-- Add your contact form here -->
+        <!-- Add contact form here -->
     </section>
 
-    <!-- Scripts -->
+    <!-- ===== SCRIPTS ===== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // ... (your existing scripts) ...
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Hamburger menu toggle function
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
-<!--Hero → Projects → Timeline → Skills → Contact-->
