@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Beahte - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
     <header>
+        <div class="hamburger" onclick="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
         <nav>
             <div class="logo">Harsh Beahte</div>
             <ul class="nav-links">
@@ -19,6 +23,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        
     </header>
 
     <section id="hero">
@@ -33,6 +38,15 @@
             <img src="profile.png" alt="Harsh Beahte">
         </div>
     </section>
-
+    
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+    AOS.init({
+  duration: 1000, // Animation duration
+  once: true // Animate only once
+});
+    
 </body>
 </html>
