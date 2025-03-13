@@ -70,7 +70,37 @@ header {
 .nav-links a:hover::after {
   width: 100%;
 }
+/* ===== Header & Navigation ===== */
+/* ... your existing header styles ... */
 
+/* ===== Social Links ===== */
+.social-links {
+    display: flex;
+    gap: 25px;
+    position: absolute;
+    right: 10%;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.social-links i {
+    font-size: 1.3rem;
+}
+
+.social-links span {
+    font-size: 0.9rem;
+}
+
+/* ===== Hero Section ===== */
+/* ... your existing hero styles ... */
 /* ===== Hero Section ===== */
 #hero {
   display: flex;
@@ -118,6 +148,7 @@ header {
   border: 3px solid var(--accent-color);
   animation: fadeIn 2s ease-in-out;
 }
+
 
 /* ===== Projects Section ===== */
 .projects {
