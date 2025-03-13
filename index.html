@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Beahte - Data Analyst</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-
     <header>
-        <div class="hamburger" onclick="toggleMenu()">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</div>
         <nav>
             <div class="logo">Harsh Beahte</div>
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- Navigation Links -->
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
     </header>
 
     <section id="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-right">
             <p class="hello">HELLO!</p>
             <h1>I'm <span>Harsh Beahte</span></h1>
             <h2>Data Analyst</h2>
-            <p class="description">I love solving business problems by taking numbers and raw data and turning them into meaningful and actionable insights!</p>
+            <p class="description">I love solving business problems by turning raw data into actionable insights!</p>
             <a href="#projects" class="btn">My Work</a>
         </div>
-        <div class="hero-image">
-            <img src="profile.png" alt="Harsh Beahte">
+        <div class="hero-image" data-aos="fade-left">
+            <img src="profile.png" alt="Harsh Beahte - Professional Portrait">
         </div>
     </section>
+
+    <!-- Add missing sections (Projects, Timeline, Skills) here -->
     
-function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-}
-    AOS.init({
-  duration: 1000, // Animation duration
-  once: true // Animate only once
-});
-    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Hamburger Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
