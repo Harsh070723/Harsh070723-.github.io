@@ -4,130 +4,62 @@
   --accent-color: #64ffda;
   --navy-shadow: rgba(2,12,27,0.7);
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-  --section-padding: 8rem;
 }
 
-/* ===== Base Improvements ===== */
-body {
-  font-size: 1.05rem;
-  letter-spacing: 0.03em;
-}
-
-/* ===== Header Enhancements ===== */
-header {
-  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-}
-
-.logo:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.nav-links a {
-  font-family: 'Fira Code', monospace;
-  font-size: 0.85rem;
-}
-
-/* ===== Hero Section Tweaks ===== */
-#hero {
-  padding: 0 10% 0 12%;
-}
-
-.hero-title {
-  margin: 1.5rem 0;
-  color: var(--text-color);
-}
-
-.hero-subtitle {
-  font-weight: 400;
+/* ===== Profile Picture Section ===== */
+.hero-profile {
+  position: relative;
+  margin-left: 4rem;
+  animation: float 6s ease-in-out infinite;
 }
 
 .profile-frame {
-  position: relative;
-  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(145deg, #64ffda 0%, #52d7d3 100%);
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: var(--transition);
 }
 
-.profile-frame::before {
-  content: '';
-  position: absolute;
+.profile-image {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 2px solid transparent;
+  object-fit: cover;
+  filter: grayscale(20%);
   transition: var(--transition);
+  border: 2px solid var(--accent-color);
 }
 
-.profile-frame:hover::before {
-  border-color: var(--accent-color);
+/* Hover Effects */
+.profile-frame:hover {
+  transform: translateY(-5px);
 }
 
-/* ===== Project Card Enhancements ===== */
-.project-card {
-  position: relative;
-  overflow: hidden;
+.profile-image:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
 }
 
-.project-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(100, 255, 218, 0.1),
-    transparent
-  );
-  transition: var(--transition);
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
-.project-card:hover::after {
-  left: 100%;
-}
-
-/* ===== Timeline Improvements ===== */
-.timeline-item {
-  padding-left: 2.5rem;
-}
-
-.timeline-marker {
-  top: 5px;
-  background: var(--accent-color);
-  border: 2px solid var(--bg-color);
-}
-
-/* ===== Skill Section Additions ===== */
-.skill-tag {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  background: rgba(100, 255, 218, 0.1);
-  border-radius: 3px;
-  transition: var(--transition);
-}
-
-.skill-tag:hover {
-  background: rgba(100, 255, 218, 0.2);
-  transform: translateY(-2px);
-}
-
-/* ===== Mobile Optimization ===== */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  :root {
-    --section-padding: 4rem;
+  .hero-profile {
+    margin: 2rem auto;
+    width: 280px;
+    height: 280px;
   }
   
-  .hero-title {
-    font-size: clamp(2.2rem, 8vw, 3rem);
-  }
-  
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .nav-links.active {
-    top: 80px;
-    padding: 1.5rem;
+  .profile-frame,
+  .profile-image {
+    width: 100%;
+    height: 100%;
   }
 }
