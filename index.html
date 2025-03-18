@@ -6,7 +6,7 @@
     <title>Harsh Beahte - Data Analyst</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,8 +30,8 @@
             </ul>
         </nav>
 
-        <!-- Social Links (Right-aligned) -->
-        <div class="social-links">
+        <!-- Social Links -->
+        <div class="header-social">
             <a href="https://www.linkedin.com/in/harsh-behate-bh070723" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
@@ -44,66 +44,106 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content" data-aos="fade-right">
-            <p class="hello">HELLO!</p>
-            <h1>I'm <span>Harsh Beahte</span></h1>
-            <h2>Data Analyst</h2>
-            <p class="description">I love solving business problems by turning raw data into actionable insights!</p>
-            <a href="#projects" class="btn">MY WORK</a>
+            <p class="subtitle">HELLO! I'M</p>
+            <h1 class="hero-title">Harsh Beahte</h1>
+            <h2 class="hero-subtitle">Data Analyst</h2>
+            <p class="hero-description">
+                Transforming raw numbers into strategic business solutions through data analysis 
+                and visualization.
+            </p>
+            <a href="#projects" class="cta-button">
+                <span>View Projects</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-        <div class="hero-image" data-aos="fade-left">
-            <img src="profile.png" alt="Harsh Beahte - Professional Portrait">
+        <div class="hero-profile" data-aos="fade-left">
+            <div class="profile-frame">
+                <img src="profile.png" alt="Harsh Beahte - Professional Portrait">
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2 data-aos="fade-up">Featured Projects</h2>
+    <section id="projects" class="section-projects">
+        <h2 class="section-title" data-aos="fade-up">Featured Work</h2>
         
-        <!-- Project Card 1 -->
-        <div class="project-card" data-aos="fade-up">
-            <img src="project1.jpg" alt="Sales Analysis Dashboard">
-            <div class="project-info">
-                <h3>Sales Analysis Dashboard</h3>
-                <p>Interactive Power BI dashboard tracking regional sales performance</p>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i> Code</a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <article class="project-card" data-aos="fade-up">
+                <div class="project-preview">
+                    <img src="project1.jpg" alt="Sales Dashboard Preview">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">Sales Performance Dashboard</h3>
+                    <p class="project-description">
+                        Power BI dashboard analyzing regional sales trends with interactive KPI tracking.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="link-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="link-icon">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="timeline" class="section-timeline">
+        <h2 class="section-title" data-aos="fade-up">Career Journey</h2>
+        
+        <div class="timeline-container">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <time class="timeline-date">2023 - Present</time>
+                    <h3 class="timeline-position">Junior Data Analyst</h3>
+                    <p class="timeline-company">Tech Solutions Inc.</p>
+                    <ul class="timeline-points">
+                        <li>Developed predictive models improving forecast accuracy by 25%</li>
+                        <li>Automated reporting processes saving 15+ hours/week</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section id="timeline" class="timeline">
-        <h2 data-aos="fade-up">Experience & Education</h2>
-        
-        <div class="timeline-item" data-aos="fade-right">
-            <div class="timeline-date">2023 - Present</div>
-            <div class="timeline-content">
-                <h3>Junior Data Analyst</h3>
-                <h4>Tech Corp</h4>
-                <p>Developed predictive models improving forecasting accuracy by 20%</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2 data-aos="fade-up">Technical Skills</h2>
+    <section id="skills" class="section-skills">
+        <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
         
-        <div class="skill-category" data-aos="fade-up">
-            <h3>Data Analysis</h3>
-            <div class="skill-item">Python</div>
-            <div class="skill-item">SQL</div>
-            <div class="skill-item">Power BI</div>
+        <div class="skills-grid">
+            <div class="skill-category" data-aos="fade-up">
+                <h3 class="skill-heading">
+                    <i class="fas fa-database"></i>
+                    Data Analysis
+                </h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Power BI</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ 
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+        
         function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
+            const nav = document.querySelector('.nav-links');
+            const header = document.querySelector('header');
+            nav.classList.toggle('active');
+            header.classList.toggle('menu-open');
         }
     </script>
 </body>
